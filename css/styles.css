@@ -1,114 +1,76 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   font-weight: 400;
   font-family: "Lato", sans-serif;
   color: #777;
   font-size: 62.5%;
-  padding: 15px;
-}
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(89, 197, 56, 0.87),
-      rgba(69, 172, 38, 0.658)
-    ),
-    url(../img/hero.jpg);
-  background-position: top;
-  background-size: cover;
-  position: relative;
-  clip-path: polygon(0 0, 0 100%, 100% 85vh, 100% 0);
-}
+  padding: 15px; }
 
 .logo__box {
   position: absolute;
   top: 40px;
-  left: 40px;
-}
+  left: 40px; }
 
 .logo {
-  height: 38px;
-}
+  height: 38px; }
+
 .text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
+  text-align: center; }
 
 .heading__primary {
   color: #fff;
-  text-transform: uppercase;
-}
-.heading__primary-main {
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  display: block;
-  margin-bottom: 15px;
-  animation: moveInLeft 1.5s ease-in-out;
-}
-.heading__primary-sub {
-  font-weight: 20px;
-  letter-spacing: 17px;
-  display: block;
-  animation: moveInRight 1.5s ease-in-out;
-  margin-bottom: 40px;
-}
+  text-transform: uppercase; }
+  .heading__primary-main {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    display: block;
+    margin-bottom: 15px;
+    animation: moveInLeft 1.5s ease-in-out; }
+  .heading__primary-sub {
+    font-weight: 20px;
+    letter-spacing: 17px;
+    display: block;
+    animation: moveInRight 1.5s ease-in-out;
+    margin-bottom: 40px; }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  80% {
-    transform: translateX(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-
-  80% {
-    transform: translateX(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -116,22 +78,27 @@ body {
   font-size: 16px;
   border-radius: 100px;
   transition: all 0.5s;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2); }
 
 .btn:active {
-  transform: translateY(2px);
-}
+  transform: translateY(2px); }
 
 .btn-white {
   background-color: #fff;
-  color: #777;
-}
+  color: #777; }
+
 .btn-animated {
   animation: moveInBottom 0.5s ease-in 0.55s;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  clip-path: polygon(0 0, 0 100%, 100% 85vh, 100% 0); }
