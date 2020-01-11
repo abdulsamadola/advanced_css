@@ -31,7 +31,8 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
+body,
+html {
   font-weight: 400;
   font-family: "Lato", sans-serif;
   color: #777;
@@ -102,3 +103,36 @@ body {
   background-size: cover;
   position: relative;
   clip-path: polygon(0 0, 0 100%, 100% 85vh, 100% 0); }
+
+.row {
+  max-width: 114rem;
+  background-color: #55c57a;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 3rem; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    background-color: yellow;
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    background-color: red;
+    width: calc((100% - 6rem* 2) / 3); }
+  .row .col-2-of-3 {
+    background-color: red;
+    width: calc( (2 * (100% - 6rem* 2) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    background-color: red;
+    width: calc((100% - 6rem* 3) / 4); }
+  .row .col-2-of-4 {
+    background-color: red;
+    width: calc( (2 * (100% - 6rem* 3) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    background-color: red;
+    width: calc( (3 * (100% - 6rem* 3) / 4) + (2 * 6rem)); }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table; }

@@ -1,0 +1,50 @@
+.row {
+  max-width: $grid-width;
+  background-color: $color-primary;
+  margin: 0 auto;
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  [class^="col-"] {
+    float: left;
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  .col-1-of-2 {
+    background-color: yellow;
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3 {
+    background-color: red;
+    width: calc((100% - #{$gutter-horizontal}* 2) / 3);
+  }
+
+  .col-2-of-3 {
+    background-color: red;
+    width: calc(
+      (2 * (100% - #{$gutter-horizontal}* 2) / 3) + #{$gutter-horizontal}
+    );
+  }
+
+  .col-1-of-4 {
+    background-color: red;
+    width: calc((100% - #{$gutter-horizontal}* 3) / 4);
+  }
+  .col-2-of-4 {
+    background-color: red;
+    width: calc(
+      (2 * (100% - #{$gutter-horizontal}* 3) / 4) + #{$gutter-horizontal}
+    );
+  }
+  .col-3-of-4 {
+    background-color: red;
+    width: calc(
+      (3 * (100% - #{$gutter-horizontal}* 3) / 4) + (2 * #{$gutter-horizontal})
+    );
+  }
+  @include clearfix;
+}

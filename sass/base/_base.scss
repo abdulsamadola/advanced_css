@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   font-weight: 400;
   font-family: "Lato", sans-serif;
   color: $color-grey-dark;
